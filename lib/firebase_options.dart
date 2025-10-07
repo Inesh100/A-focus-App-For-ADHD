@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'clarity-c6f2c.firebasestorage.app',
     measurementId: 'G-HZN82XHEH7',
   );
+
 }
