@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../models/task_models.dart';
 import '../models/user_model.dart';
-import 'package:flutter/foundation.dart';
+
 
 
 class AppViewModel extends ChangeNotifier {
@@ -15,8 +13,26 @@ class AppViewModel extends ChangeNotifier {
   Color clrlvl3 = Colors.grey.shade800;
   Color clrlvl4 = Colors.grey.shade900;
 
+  int get itemCount => tasks.length;
+
   void addTask(Task newTask) {
     tasks.add(newTask);
+    notifyListeners();
+  
+  }
+  String getTaskTitle(int Taskindex) {
+    return tasks[Taskindex].title;
+  } 
+void deleteTask(int Taskindex) {
+    tasks.removeAt(Taskindex);
+    notifyListeners();
+  }
+  bool getTaskStatus(int Taskindex) {
+    return tasks[Taskindex].complete;
+  }
+
+  void setTaskStatus(int index, bool status) {
+    tasks[index].complete = status ;
     notifyListeners();
   }
 

@@ -1,3 +1,4 @@
+import 'package:app_for_adhd/views/task_list_view.dart';
 import 'package:flutter/material.dart';
 
 import 'add_task_view.dart';
@@ -28,7 +29,7 @@ class ToDoList extends StatelessWidget {
             //Task View
             Expanded(flex :1,child:Container(color :Colors.green),),
             //Task List View
-            Expanded(flex :7,child:Container(color :Colors.blue),),
+            Expanded(flex :7,child:TaskListView()),
           ]
         ),
      ),

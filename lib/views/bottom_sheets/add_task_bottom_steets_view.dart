@@ -30,7 +30,7 @@ class AddTaskBottomSheetView extends StatelessWidget {
                     entryController.clear();
                     
                   }
-                  Navigator.of(context).pop;
+                  Navigator.of(context).pop();
                 },
                 decoration: InputDecoration(contentPadding: EdgeInsets.only(bottom: 5),filled: true, fillColor: viewModel.clrlvl2, 
                 border: OutlineInputBorder(
