@@ -1,4 +1,4 @@
-package com.example.app_for_adhd
+package com.example.clarity
 
 import io.flutter.embedding.android.FlutterActivity
 
