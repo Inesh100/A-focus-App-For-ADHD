@@ -3,36 +3,39 @@ import 'package:flutter/material.dart';
 
 import 'add_task_view.dart';
 
+/// Main To-Do List screen widget.
+/// Displays header, task view, task list, and add task button.
 class ToDoList extends StatelessWidget {
   const ToDoList ({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      //extendBodyBehindAppBar: true,
+    // UI code: Scaffold provides the basic visual layout structure
+    return Scaffold(
+      // UI code: AppBar at the top of the screen
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        leading: BackButton(   // 👈 This gives you the back arrow
+        backgroundColor: Colors.transparent, // UI code: AppBar styling
+        leading: BackButton(   // UI code: Back arrow button
           onPressed: () {
-            Navigator.pop(context); // 👈 Returns to HomePage
+            Navigator.pop(context); // UI code: navigation action
           },
         ),
       ),
-      body : SafeArea(
-        // uncomment lines 9, 11,20 to streach the app to fully envelop the top
-       //top : false,
-        bottom : false,
+      // UI code: SafeArea to avoid system UI overlap
+      body: SafeArea(
+        bottom: false,
         child: Column(
-          children : [
-            //Hedder View
-            Expanded(flex :1,child:Container(color :Colors.red),),
-            //Task View
-            Expanded(flex :1,child:Container(color :Colors.green),),
-            //Task List View
-            Expanded(flex :7,child:TaskListView()),
+          children: [
+            // UI code: Header View (red container, placeholder for header)
+            Expanded(flex: 1, child: Container(color: Colors.red)),
+            // UI code: Task View (green container, placeholder for summary/stats)
+            Expanded(flex: 1, child: Container(color: Colors.green)),
+            // UI code: Task List View (actual list of tasks)
+            Expanded(flex: 7, child: TaskListView()),
           ]
         ),
-     ),
+      ),
+      // UI code: Floating action button to add a new task
       floatingActionButton: const AddTaskView(),
     );
   }
