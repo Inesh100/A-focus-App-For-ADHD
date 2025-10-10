@@ -48,7 +48,7 @@ class TaskListView extends StatelessWidget {
                     activeColor: viewModel.clrlvl3,
                     value: viewModel.getTaskStatus(index),
                     onChanged: (value) {
-                      viewModel.setTaskStatus(index, value!);
+                      viewModel.toggleTaskStatus(index, value!);
                     },
                   ),
                   // UI code: Task title text with styling and strikethrough if completed

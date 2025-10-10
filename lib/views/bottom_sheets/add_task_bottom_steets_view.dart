@@ -18,7 +18,7 @@ class AddTaskBottomSheetView extends StatelessWidget {
       return Padding(
         // Adjust padding for keyboard overlay.
         padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-        child: Container(
+        child: SizedBox(
           height: 80, // Fixed height for the bottom sheet.
           child : 
           Center(
